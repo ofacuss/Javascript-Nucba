@@ -1,4 +1,4 @@
-// 1. SELECCIÓN DE ELEMENTOS (IDs actualizados al español)
+// SELECCIÓN
 const contenedorProductos = document.querySelector("#productos");
 const modalCarrito = document.querySelector("#modal-carrito");
 const iconoCarrito = document.querySelector(".icono-carrito");
@@ -7,10 +7,10 @@ const precioTotal = document.querySelector("#precio-total");
 const botonFinalizar = document.querySelector("#boton-finalizar"); // Coincide con el HTML
 const botonesFiltro = document.querySelectorAll(".boton-filtro");
 
-// 2. ESTADO DEL CARRITO
+// CARRO
 let carrito = JSON.parse(localStorage.getItem("carrito_2026")) || [];
 
-// 3. FUNCIONES DE PERSISTENCIA
+// FUNCIONES
 const guardarLocalStorage = () => {
     localStorage.setItem("carrito_2026", JSON.stringify(carrito));
 };
@@ -23,7 +23,7 @@ const actualizarContadorCarrito = () => {
     }
 };
 
-// 4. RENDERIZADO (Usando clases del CSS en español)
+// RENDER
 const renderizarProductos = (listaProductos) => {
     if (!contenedorProductos) return;
     contenedorProductos.innerHTML = listaProductos.map(producto => `
@@ -60,7 +60,7 @@ const renderizarCarrito = () => {
     precioTotal.innerText = total.toFixed(2);
 };
 
-// 5. LÓGICA
+// LÓGICA CARRO
 const alternarCarrito = () => modalCarrito?.classList.toggle("oculto");
 
 const agregarAlCarrito = (evento) => {
@@ -81,7 +81,7 @@ const agregarAlCarrito = (evento) => {
     actualizarContadorCarrito();
 };
 
-// 7. FINALIZAR COMPRA (Corregido con validación if)
+// Finalizar compra
 if (botonFinalizar) {
     botonFinalizar.addEventListener("click", () => {
         if (!carrito.length) return alert("¡El carrito está vacío!");
@@ -97,7 +97,7 @@ if (botonFinalizar) {
     });
 }
 
-// 8. EVENT LISTENERS
+// Escuchadores
 iconoCarrito?.addEventListener("click", alternarCarrito);
 contenedorProductos?.addEventListener("click", agregarAlCarrito);
 
@@ -112,7 +112,7 @@ botonesFiltro.forEach(boton => {
     });
 });
 
-// ARRANQUE
+// Carga
 document.addEventListener("DOMContentLoaded", () => {
     renderizarProductos(datosProductos);
     renderizarCarrito();

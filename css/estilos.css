@@ -11,7 +11,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Corregido: antes decía box-box-sizing */
+    box-sizing: border-box; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -96,7 +96,7 @@ header {
     background-color: var(--primario);
     transition: 0.4s;
 }
-
+/* Responsive */
 @media (max-width: 768px) {
     .alternar-menu { display: flex; }
     .enlaces-nav {
@@ -112,10 +112,10 @@ header {
         transition: 0.4s;
         box-shadow: -5px 0 15px rgba(0,0,0,0.5);
     }
-    /* Sincronizado con JS: usa .activo en lugar de .active */
+    
     .enlaces-nav.activo { right: 0; }
     
-    /* Sincronizado con JS: usa .abierto en lugar de .open */
+    
     .alternar-menu.abierto span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
     .alternar-menu.abierto span:nth-child(2) { opacity: 0; }
     .alternar-menu.abierto span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
@@ -251,7 +251,7 @@ header {
     border: none;
     font-weight: bold;
     cursor: pointer;
-    margin-top: auto; /* Para que el botón siempre quede abajo */
+    margin-top: auto; 
 }
 
 /* CARRITO */

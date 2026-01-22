@@ -1,3 +1,4 @@
+// Productos
 const datosProductos = [
     {
         id: 1,
@@ -8,7 +9,7 @@ const datosProductos = [
     },
     {
         id: 2,
-        nombre: "EA Sports FC 26", // Actualizado para la temporada 2026
+        nombre: "EA Sports FC 26", 
         categoria: "deportes",
         precio: 69.99,
         imagen: "./assets/fifa.jpg",
