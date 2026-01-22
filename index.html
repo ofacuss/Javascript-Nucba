@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameStore | Tu Tienda de Videojuegos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body>
+    <header>
+        <nav class="barra-navegacion">
+            <div class="logo">GAME<span>STORE</span></div>
+            <ul class="enlaces-nav">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#productos">Tienda</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="icono-carrito">
+                🛒 <span id="contador-carrito">0</span>
+            </div>
+            <!-- Traducido de mobile-menu a menu-movil -->
+            <div class="alternar-menu" id="menu-movil">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <h1>Subí de Nivel tu Juego</h1>
+            <p>Los mejores títulos en un solo lugar.</p>
+        </section>
+<!-- Sección Nosotros Traducida -->
+<section id="nosotros" class="seccion-nosotros">
+    <div class="encabezado-nosotros">
+        <h2>¿Por qué elegir GameStore?</h2>
+        <p>Somos la comunidad gamer más grande de 2026.</p>
+    </div>
+    
+    <div class="contenedor-nosotros">
+        <div class="caja-nosotros">
+            <div class="icono">🚀</div>
+            <h3>Entrega Inmediata</h3>
+            <p>Recibe tus códigos digitales al instante en tu correo tras la compra.</p>
+        </div>
+
+        <div class="caja-nosotros">
+            <div class="icono">🛡️</div>
+            <h3>Compra Segura</h3>
+            <p>Protección total en tus transacciones con tecnología blockchain gamer.</p>
+        </div>
+
+        <div class="caja-nosotros">
+            <div class="icono">🎧</div>
+            <h3>Soporte 24/7</h3>
+            <p>Estamos para ayudarte a configurar tus juegos en cualquier plataforma.</p>
+        </div>
+    </div>
+</section>
+
+        <!-- Filtrado: Traducido data-category -->
+        <section class="filtros">
+            <button class="boton-filtro activo" data-categoria="todos">Todos</button>
+            <button class="boton-filtro" data-categoria="rpg">RPG</button>
+            <button class="boton-filtro" data-categoria="deportes">Deportes</button>
+            <button class="boton-filtro" data-categoria="lucha">Lucha</button>
+        </section>
+
+        <!-- Contenedor de Productos -->
+        <section id="productos" class="contenedor-productos">
+            <!-- Se llena con JS -->
+        </section>
+    </main>
+
+    <!-- Carrito Modal -->
+    <div id="modal-carrito" class="modal-carrito oculto">
+        <h2>Tu Carrito</h2>
+        <div id="items-carrito"></div>
+        <div class="total-carrito">Total: $<span id="precio-total">0</span></div>
+        <button id="boton-finalizar">Finalizar Compra</button>
+    </div>
+
+    <!-- Contacto -->
+    <section id="contacto" class="seccion-contacto">
+        <h2>Contacto</h2>
+        <form id="formulario-contacto" class="formulario-contacto">
+            <div class="control-formulario">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+                <small class="msj-error"></small>
+            </div>
+            <div class="control-formulario">
+                <label for="correo">Correo Electrónico</label>
+                <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com">
+                <small class="msj-error"></small>
+            </div>
+            <div class="control-formulario">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" rows="4" placeholder="¿En qué podemos ayudarte?"></textarea>
+                <small class="msj-error"></small>
+            </div>
+            <button type="submit">Enviar Mensaje</button>
+            <p id="exito-formulario" class="msj-exito oculto">¡Mensaje enviado con éxito!</p>
+        </form>
+    </section>
+
+   <!-- Pie de Página -->
+<footer class="pie-pagina">
+    <div class="contenido-footer">
+        <div class="info-footer">
+            <h3>GAME<span>STORE</span></h3>
+            <p>La mejor tienda de videojuegos de 2026.</p>
+        </div>
+        
+        <div class="enlaces-footer">
+            <h4>Navegación</h4>
+            <ul>
+                <!-- Enlaces actualizados a los IDs en español -->
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+
+        <div class="redes-footer">
+            <h4>Síguenos</h4>
+            <div class="iconos-sociales">
+                <a href="https://facebook.com" target="_blank" class="enlace-social">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="enlace-social">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" class="enlace-social">
+                    <i class="fab fa-x-twitter"></i> <!-- Logo actualizado para 2026 -->
+                </a>
+                <a href="https://twitch.tv" target="_blank" class="enlace-social">
+                    <i class="fab fa-twitch"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-inferior">
+        <p>&copy; 2026 GameStore - Facundo Arias Proyecto Integrador Javascript.</p>
+    </div>
+</footer>
+
+
+    <!-- Scripts con nombres en español -->
+    <script src="./js/datos.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/formulario.js"></script>
+    <script src="./js/principal.js"></script>
+</body>
+</html>
